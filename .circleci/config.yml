@@ -8,6 +8,6 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - pixela/increment
+      - pixela/increment:
           username: bufferings
           graph-id: orb-example
