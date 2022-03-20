@@ -1,0 +1,11 @@
+version: 2.1
+
+orbs:
+  pixela: bufferings/pixela
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - pixela/increment
