@@ -9,3 +9,5 @@ jobs:
       - image: cimg/base:stable
     steps:
       - pixela/increment
+          username: bufferings
+          graph-id: orb-example
