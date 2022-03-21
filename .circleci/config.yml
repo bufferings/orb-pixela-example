@@ -9,3 +9,4 @@ workflows:
       - pixela/increment:
           username: bufferings
           graph-id: orb-example2
+      - pixela/decrement
