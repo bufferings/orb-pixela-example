@@ -3,14 +3,8 @@ version: 2.1
 orbs:
   pixela: bufferings/pixela@dev:alpha
 
-jobs:
-  build:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - pixela/increment:
-          username: bufferings
-          graph-id: orb-example
-      - pixela/decrement:
-          username: bufferings
-          graph-id: orb-example
+workflows:
+  jobs:
+    - pixela/increment:
+        username: bufferings
+        graph-id: orb-example
