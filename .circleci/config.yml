@@ -6,7 +6,7 @@ orbs:
 workflows:
   example:
     jobs:
-      - pixela/increment:
+      - pixela/increment
+      - pixela/decrement:
           username: bufferings
           graph-id: orb-example2
-      - pixela/decrement
