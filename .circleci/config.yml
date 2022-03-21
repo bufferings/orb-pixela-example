@@ -11,3 +11,6 @@ jobs:
       - pixela/increment:
           username: bufferings
           graph-id: orb-example
+      - pixela/decrement:
+          username: bufferings
+          graph-id: orb-example
