@@ -8,4 +8,4 @@ workflows:
     jobs:
       - pixela/increment:
           username: bufferings
-          graph-id: orb-example
+          graph-id: orb-example2
