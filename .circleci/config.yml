@@ -4,19 +4,6 @@ orbs:
   pixela: bufferings/pixela@0.1.0
 
 workflows:
-  example:
-    jobs:
-      - pixela/increment:
-          username: bufferings
-          graph-id: orb-example2
-      - pixela/decrement
-      - pixela/put:
-          pre-steps:
-            - run:
-                command: |
-                  echo "export PIXELA_DATE=20220320" >> $BASH_ENV
-                  echo 'export PIXELA_QUANTITY=15' >> $BASH_ENV
-workflows:
   envvars-example:
     jobs:
       - pixela/increment
