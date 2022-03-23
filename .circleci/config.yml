@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  pixela: bufferings/pixela@dev:alpha
+  pixela: bufferings/pixela@0.1.0
 
 workflows:
   example:
@@ -15,4 +15,20 @@ workflows:
             - run:
                 command: |
                   echo "export PIXELA_DATE=20220320" >> $BASH_ENV
+                  echo 'export PIXELA_QUANTITY=15' >> $BASH_ENV
+workflows:
+  envvars-example:
+    jobs:
+      - pixela/increment
+  parameters-example:
+    jobs:
+      - pixela/decrement:
+          graph-id: orb-example2
+  put-example:
+    jobs:
+      - pixela/put:
+          pre-steps:
+            - run:
+                command: |
+                  echo "export PIXELA_DATE=$(TZ=Asia/Tokyo date '+%Y%m%d' --date '1 day ago')" >> $BASH_ENV
                   echo 'export PIXELA_QUANTITY=15' >> $BASH_ENV
